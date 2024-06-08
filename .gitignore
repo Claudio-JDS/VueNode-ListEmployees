@@ -1,0 +1,54 @@
+# Dependências do node
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diretórios de build
+dist/
+dist-ssr/
+out/
+build/
+
+# Vite cache
+.vite/
+.vite-cache/
+
+# Diretórios de cache
+.cache/
+.tmp/
+
+# Arquivos de output de teste
+coverage/
+*.lcov
+
+# Arquivos de configuração local
+.env.local
+.env.*.local
+
+# Configurações do Editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de lock de pacotes
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# Arquivos de configuração do sistema
+.DS_Store
+Thumbs.db
+
+# Outros
+*.local

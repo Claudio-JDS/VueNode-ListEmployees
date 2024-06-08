@@ -1,0 +1,14 @@
+{
+  "name": "list-employees",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "build:frontend": "pnpm --filter frontend build",
+    "serve:frontend": "pnpm --filter frontend serve",
+    "dev:backend": "pnpm --filter backend start:server"
+  },
+  "devDependencies": {
+    "pnpm": "^6.0.0"
+  }
+}
