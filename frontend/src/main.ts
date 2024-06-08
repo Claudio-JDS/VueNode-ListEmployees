@@ -1,12 +1,17 @@
-import './assets/main.css'
 //unocss
-import 'unocss'
+import 'unocss';
+// sweetalert2
+import VueSweetalert2 from 'vue-sweetalert2';
+// bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
 const app = createApp(App)
+
+app.use(VueSweetalert2);
 
 app.use(router)
 
