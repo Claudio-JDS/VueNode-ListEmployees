@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import NProgress from 'nprogress';
 
 
 const router = createRouter({
@@ -21,5 +22,19 @@ const router = createRouter({
     },
   ]
 })
+
+// Metodos do NProgress
+// Iniciar a barra de progresso antes da navegação
+router.beforeResolve((to, from, next) => {
+  if (to.name) {
+    NProgress.start();
+  } 
+  next();
+});
+
+// Finalizar a barra de progresso após a navegação
+router.afterEach(() => {
+  NProgress.done()
+});
 
 export default router

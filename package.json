@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev:frontend": "pnpm --filter frontend dev",
-    "build:frontend": "pnpm --filter frontend build",
-    "serve:frontend": "pnpm --filter frontend serve",
-    "dev:backend": "pnpm --filter backend start:server"
+    "dev:front": "pnpm --filter frontend dev",
+    "build:front": "pnpm --filter frontend build",
+    "serve:front": "pnpm --filter frontend serve",
+    "dev:back": "pnpm --filter backend start:server"
   },
   "devDependencies": {
     "pnpm": "^6.0.0"

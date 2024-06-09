@@ -4,6 +4,9 @@ import 'unocss';
 import VueSweetalert2 from 'vue-sweetalert2';
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+// nprogress: barra de carregamento no navegador
+import 'nprogress/nprogress.css'
+
 
 import { createApp } from 'vue';
 import App from './App.vue';
