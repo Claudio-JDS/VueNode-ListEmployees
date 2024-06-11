@@ -1,4 +1,4 @@
-export interface Employee {
+export default interface Employee {
   name: string,
   job_role: string,
   salary: number,

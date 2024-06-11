@@ -1,21 +1,31 @@
-//unocss
+// Importações de bibliotecas de estilo
 import 'unocss';
-// sweetalert2
-import VueSweetalert2 from 'vue-sweetalert2';
-// bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-// nprogress: barra de carregamento no navegador
 import 'nprogress/nprogress.css'
 
+// Importação do VueSweetalert2
+import VueSweetalert2 from 'vue-sweetalert2';
 
+// Importações do Vue e App
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
-const app = createApp(App)
+// Importações do Vualidate
+import Vuelidate from '@vuelidate/core'
 
+// Configuração do Vualidate
+
+
+///// Criação do app Vue////////
+const app = createApp(App);
+
+// Vualidate
+app.use(Vuelidate);
+
+// Uso de plugins
 app.use(VueSweetalert2);
+app.use(router);
 
-app.use(router)
-
-app.mount('#app')
+// Montagem do app Vue
+app.mount('#app');
