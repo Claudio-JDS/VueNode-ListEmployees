@@ -17,11 +17,14 @@ const employee = ref<Employee>({
 // vuelidate: definição das regras de validação
 const rules = {
   name: { required, minLength: minLength(2) },
-  salary: { required, minValue: minValue(1) } // Adicionado minValue para salary
+  job_role: {required},
+  salary: { required, minValue: minValue(1) } ,
+  birth: { required, minLength: minLength(8) },
+  employee_registration: {required}
 }
 
 // vuelidate: uso do Vuelidate com as regras de validação
-const v$ = useVuelidate(rules, employee);//a váriavel employee deve ser declarada antes de ser atribuída
+const v$ = useVuelidate(rules, employee);
 
 function handleSubmitForm() {
   // vuelidate: validações do  ao tentar enviar o formulário
@@ -55,7 +58,7 @@ function handleSubmitForm() {
               :class="{'is-invalid': v$.name.$error}"
             >
             <span v-if="v$.name.$error" class="is-invalid-span">
-              O campo nome é obrigatório e deve ter pelo menos 2 caracteres
+              The name field is mandatory and must have at least 2 characters
             </span>
           </div>
           <!-- FIM BLOCO: Employee Name -->
@@ -68,7 +71,11 @@ function handleSubmitForm() {
                 class="form-control" 
                 placeholder="Type Job" 
                 v-model="employee.job_role"
+                :class="{'is-invalid': v$.job_role.$error}"
               >
+              <span v-if="v$.job_role.$error" class="is-invalid-span">
+              Fill in the field
+            </span>
           </div>
           <!-- FIM BLOCO: Job Role -->
 
@@ -84,7 +91,7 @@ function handleSubmitForm() {
               :class="{'is-invalid': v$.salary.$error}"
             >
             <span v-if="v$.salary.$error" class="is-invalid-span">
-              O campo salário é obrigatório
+              The salary field is mandatory
             </span>
           </div>
           <!-- FIM BLOCO: Salary -->
@@ -97,7 +104,11 @@ function handleSubmitForm() {
               class="form-control" 
               placeholder="YYYY/MM/DD" 
               v-model="employee.birth"
+              :class="{'is-invalid': v$.birth.$error}"
             >
+            <span v-if="v$.birth.$error" class="is-invalid-span">
+              Fill in the field
+            </span>
           </div>
           <!-- FIM BLOCO: Birth -->
 
@@ -109,7 +120,11 @@ function handleSubmitForm() {
               class="form-control" 
               placeholder="Employee Registration"
               v-model="employee.employee_registration"
+              :class="{'is-invalid': v$.employee_registration.$error}"
             >
+            <span v-if="v$.employee_registration.$error" class="is-invalid-span">
+              Fill in the field
+            </span>
           </div>
           <!-- FIM BLOCO: Employee Registration -->
 
